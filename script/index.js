@@ -24,10 +24,14 @@ const esUsuarioValido = (user) => !isNaN(user);
 const esContraseñaValida = (contra) => contra.length >= 4;
 
 function mostrarErrores(user, password) {
-    isNaN(user) ? tirarMensaje("#erroresUsuario", "El usuario solo puede ser números.")
+    // user == "" ? tirarMensaje("#erroresUsuario", "* Por favor, complete este campo.")
+    // : tirarMensaje("#erroresUsuario", "");
+
+    isNaN(user) ? tirarMensaje("#erroresUsuario", "* El usuario solo puede ser números.")
         : tirarMensaje("#erroresUsuario", "");
 
-    password.length < 4 ? tirarMensaje("#erroresContraseña", "Contraseña demasiado corta.")
+
+    password.length < 4 ? tirarMensaje("#erroresContraseña", "* Contraseña demasiado corta.")
         : tirarMensaje("#erroresContraseña", "");
 }
 

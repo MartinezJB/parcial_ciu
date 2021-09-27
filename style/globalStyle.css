@@ -3,6 +3,7 @@
     --color-secundario : #05B4E9;
     --color-contraste : #FFC60B;
     --color-contraste-2 : #7E0100;
+    --color-error : #ff0e0e;
     --color-normal: #313131;
 }
 
@@ -27,11 +28,11 @@ header {
     padding: 0.5rem;
 }
 
-.body-login, .body-principal header {
+.body-login,  .body-principal {
     background-color: var(--color-primario);
 }
 
-.body-login header, .body-principal {
+.body-login header,.body-principal header {
     background-color: var(--color-secundario);
 }
 
@@ -103,10 +104,15 @@ header {
 }
 
 .form-container input {
-    height: 2rem;
+    height: 3rem;
     width: 500px;
     padding-left: 10px;
     font-size: large;
+}
+
+.form-container .errores {
+    color: var(--color-error);
+    height: 1rem; 
 }
 
 #entrar {
@@ -135,7 +141,10 @@ header {
     width: max-content;
     padding: 1rem 2rem;
     margin: auto;
-    outline: auto;
+}
+
+.beneficios p {
+    font-size: x-large;
 }
 
 .lista-tarjetas {
@@ -149,12 +158,49 @@ header {
 
 .tarjeta-descuento {
     width: max-content;
+    background-color: var(--color-primario);
+    margin: 1rem 2rem;
+    box-shadow: 5px 5px 15px black;
+    border: 1px solid var(--color-contraste);
+    transition: ease 0.4s;
+}
 
-    outline: auto;
+.tarjeta-descuento:hover {
+    transform: scale(1.03);
+    box-shadow: 5px 5px 10px black;
+    cursor: pointer;
 }
 
 .tarjeta-descuento img{
     width: 300px;
-    height: 260px;
+    height: 250px;
 }
 
+.tarjeta-descuento .info {
+    text-align: start;
+    padding-left: 1rem;
+    border-top: 1px solid var(--color-normal);
+}
+
+.descuento, .nombre-farmacia, .direccion {
+    margin-top: 0.3rem;
+}
+
+.tarjeta-descuento .info .descuento {
+    font-size: 2rem;
+}
+
+.tarjeta-descuento .info .nombre-farmacia {
+    font-size: larger;
+}
+
+.tarjeta-descuento .info .fecha-vigencia {
+    margin-top: 1.2rem;
+}
+
+.tarjeta-descuento .info .direccion {
+    text-align: center;
+    margin-left: -1rem;
+    margin-bottom: 0.3rem;
+    font-size: small;
+}

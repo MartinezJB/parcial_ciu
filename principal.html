@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/globalStyle.css">
     <title>Ministerio de salud de CABA | Home</title>
 </head>
-<body>
+<body class="body-principal">
     <header>
-        <img src="./imagenes/logo.jpeg" alt="Logo del ministerio de salud">
-        <nav>
+        <img class="logo" src="./imagenes/logo_minsterio.png" alt="Logo del ministerio de salud">
+        <nav class="nav-bar">
+            <input id="check" type="checkbox">
+            <label for="check"> <img class="icono-cuenta" src="./imagenes/icono-cuenta.png" alt="icono cuenta"> </label>
             <ul>
                 <li><a href="#">Mi perfil</a></li>
                 <li><a href="#">Turnos</a></li>
@@ -20,39 +23,42 @@
         </nav>
     </header>
 
-    <h1>Joaquin Martinez</h1>
+    <h1 class="nombre">Joaquin Martinez</h1>
 
     <div class="beneficios">
-
-        <div class="tarjeta-descuento">
-            <img src="./imagenes/logo_farmacity.png" alt="farmacity">
-            <div class="info">
-                <h2 class="descuento">15% OFF</h2>
-                <h2 class="nombre-farmacia">Farmacity</h2>
-                <p class="fecha-vigencia">desde el 28/05 hasta el 27/06</p>
-                <p class="direccion">Av. Juan Bautista Alberdi 5801</p>
+        <p class="subtitulo">Beneficios</p>
+        <div class="lista-tarjetas">
+            <div class="tarjeta-descuento">
+                <img src="./imagenes/logo_farmacity.png" alt="farmacity">
+                <div class="info">
+                    <h2 class="descuento">15% OFF</h2>
+                    <h2 class="nombre-farmacia">Farmacity</h2>
+                    <p class="fecha-vigencia">desde el 28/05 hasta el 27/06</p>
+                    <p class="direccion">Av. Juan Bautista Alberdi 5801</p>
+                </div>
+            </div>
+    
+            <div class="tarjeta-descuento">
+                <img src="./imagenes/logo_dr_ahorro.jpeg" alt="dr ahorro">
+                <div class="info">
+                    <h2 class="descuento">35% OFF</h2>
+                    <h2 class="nombre-farmacia">Dr ahorro</h2>
+                    <p class="fecha-vigencia">¡Todo el mes!</p>
+                    <p class="direccion">CABA ALMAGRO Av. Medrano 6</p>
+                </div>
+            </div>
+    
+            <div class="tarjeta-descuento">
+                <img src="./imagenes/logo_zimerman.png" alt="dr ahorro">
+                <div class="info">
+                    <h2 class="descuento">6x5 en alcohol en gel</h2>
+                    <h2 class="nombre-farmacia">Zimmermann</h2>
+                    <p class="fecha-vigencia">Hasta agotar stock</p>
+                    <p class="direccion">Av. José Equiza 4171</p>
+                </div>
             </div>
         </div>
-
-        <div class="tarjeta-descuento">
-            <img src="./imagenes/logo_dr_ahorro.jpeg" alt="dr ahorro">
-            <div class="info">
-                <h2 class="descuento">35% OFF</h2>
-                <h2 class="nombre-farmacia">Dr ahorro</h2>
-                <p class="fecha-vigencia">¡Todo el mes!</p>
-                <p class="direccion">CABA ALMAGRO Av. Medrano 6</p>
-            </div>
-        </div>
-
-        <div class="tarjeta-descuento">
-            <img src="./imagenes/logo_zimerman.png" alt="dr ahorro">
-            <div class="info">
-                <h2 class="descuento">6x5 en alcohol en gel</h2>
-                <h2 class="nombre-farmacia">Zimmermann</h2>
-                <p class="fecha-vigencia">Hasta agotar stock</p>
-                <p class="direccion">Av. José Equiza 4171</p>
-            </div>
-        </div>
+        
     </div>
 
     <script src="./script/principal.js"></script>
